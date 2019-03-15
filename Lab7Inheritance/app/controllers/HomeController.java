@@ -83,6 +83,12 @@ public Result addItemSubmit() {
         return badRequest(addTask.render(newItemForm,User.getUserById(session().get("email"))));
     } else {
         ItemOnSale newItem = newItemForm.get();
+
+         List<Category> newCats = new ArrayList<Category>();
+        for (Long cat : newItem.getCatSelect()) {
+            newCats.add(Category.find.byId(cat));
+        }
+        newItem.setCategories (newCats);
         
         if(newItem.getId()==null){
         newItem.save();
