@@ -1,6 +1,6 @@
 @(users: List[models.users.Administrator],user: models.users.User)
 @main("Administrators",user){
-    <h1>Current administrators</h1>
+    <h1>Current Managers</h1>
 
 
     @* Display successful new user message from flash, if it is set *@
@@ -11,7 +11,7 @@
 }
 
     <div class="col-sm-9">
-        <h4>Here are all the current administrators on the system.</h4>
+        <h4>Here are all the current managers on the system.</h4>
         <table class="table table-bordered table-hover table-condensed">
             <thead>
         <!-- The header row-->

@@ -29,7 +29,7 @@
 			<li @if(pagename == "Register") {class="active"}><a href="@routes.LoginController.registerUser()">Register user</a></li>
 			@if((user != null) && ("admin".equals(user.getRole()))) {
 				<li @if(pagename == "Administrators") {class="active"}><a href="@routes.HomeController.usersAdmin()">View Manager</a></li>
-				<li @if(pagename == "Customers") {class="active"}><a href="@routes.HomeController.usersCustomer()">View Employee</a></li>
+				
 
 			}
 			
@@ -70,7 +70,7 @@
 	    <div class="row">
 		<div class="col-sm-12">
 		    <div class="well footer">
-			Website created by ABC Sights
+			
 		    </div>
 		</div>
 	    </div>

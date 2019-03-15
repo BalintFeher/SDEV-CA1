@@ -4,7 +4,7 @@
 @import helper._
 
 @main("Add Admin",user){
-    <p class="lead">Add a new administrator</p>
+    <p class="lead">Add a new Manager</p>
 
     <!-- Use a views.html.helpers package method to create the form (instead of html)-->
     <!-- Note the arguments that are being passed to the scala function form (they are
@@ -25,7 +25,7 @@
                 2. A button that allows the user to cancel without adding an item
             -->
             <div class="actions">
-                <input type="submit" value="Add/Update Admin" class="btn btn-primary">
+                <input type="submit" value="Add/Update Manager" class="btn btn-primary">
                 <a href="@routes.HomeController.usersAdmin()">
                     <button type="button" class="btn btn-warning">Cancel</button>
                 </a>

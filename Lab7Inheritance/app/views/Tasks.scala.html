@@ -39,8 +39,8 @@
         <!-- The header row-->
         <tr>
             <th>ID</th>
-            <th>Name Picture</th>
-            
+            <th>Image</th>
+            <th>Name</th>
             <th>Address</th>
            <th>Project</th>
         </tr>
@@ -52,8 +52,12 @@
             @for(i<-items) {
                <tr>
                   <td>@i.getId</td>
+                  @if(env.resource("public/images/productImages/" + i.getId + "thumb.jpg").isDefined) {
+                    <td><img src = "/assets/images/productImages/@(i.getId + "thumb.jpg")"/></td>
+                  }else{
+                    <td><img src = "/assets/images/productImages/noImage.jpg"/></td>
+                  }
                   <td>@i.getName</td>
-                  
                   <td>@i.getAddress</td>
                   <td>@i.getProject</td>
 
@@ -79,7 +83,7 @@
     @if((user != null) && ("admin".equals(user.getRole()))) {
     <p>
         <a href="@routes.HomeController.addItem()">
-            <button class="btn btn-primary">Add an task</button>
+            <button class="btn btn-primary">Add task</button>
         </a>
     </p>
     }
