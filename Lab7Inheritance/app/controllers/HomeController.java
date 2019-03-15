@@ -14,6 +14,7 @@ import javax.inject.Inject;
 
 import models.*;
 import models.users.*;
+import models.products.*;
 
 import play.mvc.Http.*;
 import play.mvc.Http.MultipartFormData.FilePart;

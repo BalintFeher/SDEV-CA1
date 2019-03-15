@@ -1,4 +1,4 @@
-@(items: List[models.ItemOnSale],categories: List[models.Category],user: models.users.User, env: play.api.Environment)
+@(items: List[models.products.ItemOnSale],categories: List[models.products.Category],user: models.users.User, env: play.api.Environment)
 @main("On Sale",user){
 
 
@@ -40,7 +40,7 @@
         <tr>
             <th>ID</th>
             <th>Name Picture</th>
-            <th>Category</th>
+            
             <th>Address</th>
            <th>Project</th>
         </tr>
@@ -53,7 +53,7 @@
                <tr>
                   <td>@i.getId</td>
                   <td>@i.getName</td>
-                  <td>@i.getCategory.getName</td>
+                  
                   <td>@i.getAddress</td>
                   <td>@i.getProject</td>
 
